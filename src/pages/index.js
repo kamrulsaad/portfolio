@@ -5,6 +5,8 @@ import profilePic from '../../public/images/profile/developer-pic-1.png'
 import AnimatedText from '@/components/AnimatedText'
 import Link from 'next/link'
 import { LinkArrow } from '@/components/Icons'
+import HireMe from '@/components/HireMe'
+import LightBulb from '../../public/images/svgs/miscellaneous_icons_1.svg'
 
 export default function Home() {
   return (
@@ -30,7 +32,7 @@ export default function Home() {
                   className='flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold  hover:bg-light hover:text-dark transition duration-300 ease-in-out mr-4 border-solid border-trasparent border-2 hover:border-dark'
                   download={true}
                 >Resume
-                <LinkArrow className={'h-6 w-6 ml-2'} />
+                  <LinkArrow className={'h-6 w-6 ml-2'} />
                 </Link>
                 <Link href='mailto:skamrul2680@gmail.com'
                   target='_blank'
@@ -40,6 +42,10 @@ export default function Home() {
             </div>
           </div>
         </Layout>
+        <HireMe />
+        <div className='absolute right-8 bottom-8 inline-block w-24'>
+          <Image src={LightBulb} alt='Kamrul Saad' className="w-full h-auto" />
+        </div>
       </main>
     </>
   )
