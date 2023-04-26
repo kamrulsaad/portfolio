@@ -16,7 +16,7 @@ const Details = ({ type, time, place, info }) => {
             <h3 className='capitalize font-bold text-2xl'>
                 {type}
             </h3>
-            <span className='capitalize font-medium text-dark/75 '>
+            <span className='capitalize font-medium dark:text-light/75 text-dark/75 '>
                 {time} |  {place}
             </span>
             <p className='font-medium w-full'>
@@ -49,7 +49,7 @@ const Education = () => {
                     style={{
                         scaleY: scrollYProgress
                     }}
-                    className='absolute left-9 top-0 w-[4px] h-full bg-dark origin-top' />
+                    className='absolute left-9 top-0 w-[4px] h-full bg-dark dark:bg-light origin-top' />
 
                 <ul className='w-full flex flex-col justify-between items-start ml-32'>
                     <Details

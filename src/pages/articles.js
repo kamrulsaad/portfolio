@@ -60,21 +60,21 @@ const Articles = ({
                 ease: 'easeInOut'
             }
         }}
-        viewport={{once: true}}
-        className='relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4'>
+        viewport={{ once: true }}
+        className='relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid dark:text-light dark:bg-dark dark:border-light border-dark border-r-4 border-b-4'>
         <MovingImage
             image={image}
             title={title}
             link={link}
         />
-        <span className='text-primary font-semibold pl-4'>
+        <span className='text-primary dark:text-primaryDark font-semibold pl-4'>
             {date}
         </span>
     </motion.li>
 }
 
 const FeaturedArticles = ({ image, title, time, summary, link }) => {
-    return <li className='col-span-1 w-full p-4 bg-light border border-solid rounded-2xl border-dark relative'>
+    return <li className='col-span-1 w-full p-4 bg-light border border-solid rounded-2xl border-dark relative dark:border-light dark:bg-dark'>
         <div className='absolute rounded-br-3xl top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark' />
         <Link className='w-full cursor-pointer overflow-hidden rounded-lg inline-block' href={link} target='_blank'>
             <FramerImage src={image} alt={title} className="w-full h-auto "
@@ -90,7 +90,7 @@ const FeaturedArticles = ({ image, title, time, summary, link }) => {
         <p className='mb-2 text-sm'>
             {summary}
         </p>
-        <span className='text-primary font-semibold'>
+        <span className='text-primary dark:text-primaryDark font-semibold'>
             {time}
         </span>
     </li>
@@ -103,7 +103,7 @@ const articles = () => {
                 <title>Article | Kamrul Saad</title>
                 <meta name="description" content="Articles from Kamrul Saad" />
             </Head>
-            <main className='w-full mb-16 flex flex-col items-center justify-center overflow-hidden'>
+            <main className='w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light'>
                 <Layout className='pt-16'>
                     <AnimatedText
                         text="Words Can Change The World!"

@@ -69,7 +69,7 @@ const Navbar = () => {
                     }}>
                     <DribbbleIcon />
                 </motion.a>
-                <motion.a href="/" target={'_blank'} className='w-6 ml-3 ' whileHover={{
+                <motion.a href="/" target={'_blank'} className='w-6 ml-3 bg-light rounded-full' whileHover={{
                     y: -2
                 }}
                     whileTap={{
