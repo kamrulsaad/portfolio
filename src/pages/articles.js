@@ -6,6 +6,7 @@ import Link from 'next/link'
 import React, { useRef } from 'react'
 import article1 from '../../public/images/articles/create loading screen in react js.jpg'
 import { motion, useMotionValue } from 'framer-motion'
+import TransitionEffect from '@/components/TransitionEffect'
 
 const FramerImage = motion(Image);
 
@@ -42,7 +43,7 @@ const MovingImage = ({ image, title, link }) => {
                 opacity: 1,
                 transition: { duration: 0.5 }
             }}
-            ref={imageRef} src={image} alt={title} className="w-96 hidden absolute rounded-lg z-10 h-auto" />
+            ref={imageRef} src={image} alt={title} className="w-96 hidden absolute rounded-lg z-10 h-auto md:!hidden" />
     </Link>
 }
 
@@ -61,13 +62,13 @@ const Articles = ({
             }
         }}
         viewport={{ once: true }}
-        className='relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid dark:text-light dark:bg-dark dark:border-light border-dark border-r-4 border-b-4'>
+        className='relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid dark:text-light dark:bg-dark dark:border-light border-dark border-r-4 border-b-4 sm:flex-col'>
         <MovingImage
             image={image}
             title={title}
             link={link}
         />
-        <span className='text-primary dark:text-primaryDark font-semibold pl-4'>
+        <span className='text-primary dark:text-primaryDark font-semibold pl-4 sm:pl-0 sm:self-start xs:text-sm'>
             {date}
         </span>
     </motion.li>
@@ -86,7 +87,7 @@ const FeaturedArticles = ({ image, title, time, summary, link }) => {
             />
         </Link>
         <Link href={link} target='_blank'>
-            <h2 className='capitalize my-2 mt-4 w-full text-2xl font-bold hover:underline'>
+            <h2 className='capitalize my-2 mt-4 w-full text-2xl font-bold hover:underline xs:text-lg'>
                 {title}
             </h2>
         </Link>
@@ -104,15 +105,16 @@ const articles = () => {
         <>
             <Head>
                 <title>Article | Kamrul Saad</title>
-                <meta name="description" content="Articles from Kamrul Saad" />
+                <meta name="description" content="Articles of Kamrul Saad" />
             </Head>
+            <TransitionEffect />
             <main className='w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light'>
                 <Layout className='pt-16'>
                     <AnimatedText
                         text="Words Can Change The World!"
-                        className='mb-16'
+                        className='mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl'
                     />
-                    <ul className='grid grid-cols-2 gap-16'>
+                    <ul className='grid grid-cols-2 gap-16 md:grid-cols-1 lg:gap-8 md:gap-y-16'>
                         <FeaturedArticles
                             title={'Build A Custom Pagination Component In Reactjs From Scratch'}
                             summary={'Learn how to build a custom pagination component in ReactJS from scratch.'}
