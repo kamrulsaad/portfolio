@@ -17,16 +17,21 @@ export default function Home() {
 
       </Head>
       <main className='text-dark flex items-center w-full min-h-screen dark:text-light'>
-        <Layout className='pt-0'>
-          <div className='flex items-center justify-between w-full'>
-            <div className='w-1/2'>
-              <Image src={profilePic} alt='Kamrul Saad' className="w-full h-auto" />
+        <Layout className='pt-0 md:pt-16 sm:pt-8'>
+          <div className='flex lg:flex-col items-center justify-between w-full'>
+            <div className='w-1/2 md:w-full'>
+              <Image src={profilePic} alt='Kamrul Saad' className="w-full h-auto lg:hidden md:inline-block md:w-full" priority
+                sizes='(max-width: 768px) 100vw, 
+              (max-width: 1200px) 50vw, 50vw'
+              />
             </div>
-            <div className='w-1/2 flex flex-col items-center self-center'>
-              <AnimatedText className='!text-6xl !text-left' text="Turning Vision Into Reality With Code And Design."></AnimatedText>
+            <div className='w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center'>
+              <AnimatedText className='!text-6xl !text-left 
+              xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl
+              ' text="Turning Vision Into Reality With Code And Design."></AnimatedText>
               <p className='my-4 text-base font-medium'>As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications.
                 Explore my latest projects and articles, showcasing my expertise in React.js and web development.</p>
-              <div className='flex items-center self-start mt-2'>
+              <div className='flex items-center self-start mt-2 lg:self-center'>
                 <Link href='/dummy.pdf'
                   target='_blank'
                   className='flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold  hover:bg-light hover:text-dark transition duration-300 ease-in-out mr-4 border-solid border-trasparent border-2 hover:border-dark dark:text-dark dark:bg-light hover:dark:bg-dark hover:dark:text-light hover:dark:border-light'
