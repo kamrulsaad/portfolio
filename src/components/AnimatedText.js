@@ -8,7 +8,7 @@ const quote = {
     animate: {
         opacity: 1,
         transition: {
-            delay: 0.5,
+            delay: 5,
             staggerChildren: 0.08,
         }
     }

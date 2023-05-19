@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <footer className='w-full border-t-2 border-solid border-dark font-medium text-lg dark:text-light dark:border-light sm:text-base'>
             <Layout className='py-8 flex lg:flex-col lg:py-6 items-center justify-between  '>
-                <span>{new Date().getFullYear()} &copy; All Rights Reserved.</span>
+                <span>{new Date().getFullYear()} &copy; Kamrul Saad</span>
                 <div className='flex items-center lg:my-2'>
                     Built with <span className='
                 text-primary text-2xl px-1 dark:text-primaryDark

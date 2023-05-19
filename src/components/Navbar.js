@@ -60,11 +60,11 @@ const Navbar = () => {
             </button>
 
             <div className='w-full flex justify-between items-center lg:hidden'>
-                <nav>
-                    <CustomLink className='mr-4' href="/" title={"Home"} />
-                    <CustomLink className='mx-4' href="/about" title={"About"} />
-                    <CustomLink className='mr-4' title={"Projects"} href="/projects" />
-                    <CustomLink href="/articles" title={"Articles"} className='ml-4' />
+                <nav className='space-x-4'>
+                    <CustomLink href="/" title={"Home"} />
+                    <CustomLink href="/about" title={"About"} />
+                    <CustomLink title={"Projects"} href="/projects" />
+                    <CustomLink href="/articles" title={"Articles"} />
                 </nav>
 
                 <nav className='flex items-center justify-center flex-wrap'>
