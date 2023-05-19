@@ -52,7 +52,7 @@ const about = () => {
                         <div className='col-span-3 md:col-span-8 xl:col-span-4 flex flex-col items-start justify-start md:order-2'>
                             <h2 className='mb-4 text-lg font-bold uppercase text-dark dark:text-light/75 opacity-75'>Biography</h2>
                             <p className='font-medium'>
-                                - Hi, I'm CodeBucks, a web developer and UI/UX designer with a passion for creating beautiful, functional,
+                                 Hi, I'm CodeBucks, a web developer and UI/UX designer with a passion for creating beautiful, functional,
                                 and user-centered digital experiences. With 4 years of experience in the field. I am always looking for
                                 new and innovative ways to bring my clients' visions to life.
                             </p>
